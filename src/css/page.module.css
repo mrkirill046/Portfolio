@@ -1,10 +1,92 @@
 .main {
-
+    background: url("/bg.webp") no-repeat center center;
 }
 
 .first_section {
-
+    color: white;
+    display: flex;
+    font-size: 2vh;
+    font-family: monospace;
+    padding-top: 12vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    flex-direction: column;
 }
+
+.first_section ul li {
+    margin-left: 2vw;
+}
+
+.first_section article {
+    border: 10px solid #471467;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    padding: 30px;
+    background: #4e1671;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+.first_section article:hover,
+.first_section article:active {
+    transform: scale(1.01) translateY(-10px);
+}
+
+#contacts {
+    padding: 20px;
+    background: #909090;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.contact_container {
+    text-align: center;
+}
+
+.contact_container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact_container p {
+    font-size: 16px;
+    color: #b7b5b5;
+    margin-bottom: 10px;
+}
+
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact_item {
+    transition: all 0.5s ease-in-out;
+    background: #6a1d9a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact_item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.contact_item a {
+    color: #0070f3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact_item a:hover,
+.contact_item a:active {
+    text-decoration: underline;
+}
+
 
 .two_section {
 
@@ -12,4 +94,11 @@
 
 .three_section {
 
+}
+
+@media (hover: hover) {
+    .contact_item:hover {
+        margin-left: 150px;
+        margin-right: 150px;
+    }
 }
