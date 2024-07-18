@@ -102,3 +102,10 @@
         margin-right: 150px;
     }
 }
+
+@media (hover: none) {
+    .contact_item:hover {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
