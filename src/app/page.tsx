@@ -2,8 +2,47 @@
 
 import styles from "../css/page.module.css"
 import Projects from "../components/projects"
+import Image from "next/image"
+import {useEffect, useState} from "react"
 
 export default function Page() {
+    const [images, setImages] = useState({
+        github: "/logotypes/github-desktop.webp",
+        youdo: "/logotypes/youdo-desktop.webp",
+        habr: "/logotypes/habr-desktop.webp",
+        fl: "/logotypes/fl-desktop.webp"
+    })
+
+    let maxWidth = 768
+
+    useEffect(() => {
+        const updateImageSrc = () => {
+            if (window.innerWidth <= maxWidth) {
+                setImages({
+                    github: "/logotypes/github-mobile.webp",
+                    youdo: "/logotypes/youdo-mobile.webp",
+                    habr: "/logotypes/habr-mobile.webp",
+                    fl: "/logotypes/fl-mobile.webp"
+                })
+            } else {
+                setImages({
+                    github: "/logotypes/github-desktop.webp",
+                    youdo: "/logotypes/youdo-desktop.webp",
+                    habr: "/logotypes/habr-desktop.webp",
+                    fl: "/logotypes/fl-desktop.webp"
+                })
+            }
+        }
+
+        window.addEventListener('resize', updateImageSrc)
+        updateImageSrc()
+
+        return () => {
+            window.removeEventListener('resize', updateImageSrc)
+        }
+    }, [])
+
+
     return (
         <main className={styles.main}>
             <section className={styles.first_section}>
@@ -71,24 +110,30 @@ export default function Page() {
             </section>
 
             <section className={styles.two_section}>
-                <article id="github">
+                <h2 className={styles.center_h2}>Мои аккаунты</h2>
 
+                <article id="github">
+                    <h2>GitHub</h2>
+                    <Image className={styles.github_account} width={800} height={400} src={images.github} alt="site logo"/>
+                    <p><a href="https://github.com/mrkirill046" target="_blank">Профиль</a></p>
                 </article>
 
                 <article id="youdo">
-
+                    <h2>YOUDO</h2>
+                    <Image className={styles.youdo_account} width={800} height={400} src={images.youdo} alt="site logo"/>
+                    <p><a href="https://youdo.com/u12060783" target="_blank">Профиль</a></p>
                 </article>
 
                 <article id="habr">
-
-                </article>
-
-                <article id="workzilla">
-
+                    <h2>Habr</h2>
+                    <Image className={styles.habr_account} width={800} height={400} src={images.habr} alt="site logo"/>
+                    <p><a href="https://freelance.habr.com/freelancers/mr_kirill046" target="_blank">Профиль</a></p>
                 </article>
 
                 <article id="fl">
-
+                    <h2>Fl</h2>
+                    <Image className={styles.fl_account} width={400} height={400} src={images.fl} alt="site logo"/>
+                    <p><a href="https://www.fl.ru/users/molin4670/portfolio/" target="_blank">Профиль</a></p>
                 </article>
             </section>
 

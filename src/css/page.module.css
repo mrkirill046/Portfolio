@@ -109,10 +109,52 @@
 .center_h2 {
     text-align: center;
     margin-bottom: 30px;
+    color: white;
 }
 
 .two_section {
+    color: white;
+    display: flex;
+    font-size: 2vh;
+    font-family: monospace;
+    padding-top: 12vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    flex-direction: column;
+}
 
+.two_section article {
+    border: 10px solid #142067;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    padding: 30px;
+    background: #162d71;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    text-align: center;
+}
+
+.two_section article a {
+    color: deepskyblue;
+}
+
+.two_section article a:hover,
+.two_section article a:active {
+    text-decoration: underline;
+}
+
+.two_section article h2 {
+    font-size: 40px;
+}
+
+.habr_account {
+    width: 100vh;
+    height: 50vh;
+    margin: -100px;
+}
+
+.fl_account {
+    margin: -50px;
 }
 
 .three_section {
@@ -131,5 +173,37 @@
     .contact_item:active {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    .github_account {
+        display: flex;
+        justify-content: center;
+        width: 320px;
+        height: 180px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .youdo_account {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    .habr_account {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        margin: -50px 0;
+    }
+
+    .fl_account {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+        margin: 50px 50px 50px 75px;
     }
 }

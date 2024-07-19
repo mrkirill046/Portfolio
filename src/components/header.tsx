@@ -63,7 +63,7 @@ export default function Header() {
         <header>
             <section className={styles.header}>
                 <article className={styles.image}>
-                    <a href="/"><Image src="/icon.png" width={50} height={50} alt="logotype"/></a>
+                    <a href="/"><Image src="/icon.webp" width={50} height={50} alt="logotype"/></a>
                 </article>
 
                 <nav className={styles.list}>
@@ -74,7 +74,6 @@ export default function Header() {
                         <li><a href="/#github">GitHub</a></li>
                         <li><a href="/#youdo">Youdo</a></li>
                         <li><a href="/#habr">Habr</a></li>
-                        <li><a href="/#workzilla">Workzilla</a></li>
                         <li><a href="/#fl">Fl</a></li>
                     </ul>
                 </nav>
@@ -97,7 +96,6 @@ export default function Header() {
                         <li><a href="/#github">GitHub</a></li>
                         <li><a href="/#youdo">Youdo</a></li>
                         <li><a href="/#habr">Habr</a></li>
-                        <li><a href="/#workzilla">Workzilla</a></li>
                         <li><a href="/#fl">Fl</a></li>
                     </ul>
                 </nav>
