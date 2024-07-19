@@ -1,5 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .main {
     background: url("/bg.webp") no-repeat center center;
+}
+
+.main p,
+.main a,
+.main ul {
+    font-family: "Comfortaa", monospace;
+}
+
+.main ul li {
+    font-family: "Play", monospace;
+}
+
+.main h2,
+.main h3 {
+    font-family: "Press Start 2P", monospace;
 }
 
 .first_section {
@@ -77,7 +96,7 @@
 }
 
 .contact_item a {
-    color: #0070f3;
+    color: deepskyblue;
     text-decoration: none;
     font-weight: bold;
 }
@@ -87,6 +106,10 @@
     text-decoration: underline;
 }
 
+.center_h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
 
 .two_section {
 
@@ -100,5 +123,13 @@
     .contact_item:hover {
         margin-left: 150px;
         margin-right: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact_item:hover,
+    .contact_item:active {
+        margin-left: 0;
+        margin-right: 0;
     }
 }

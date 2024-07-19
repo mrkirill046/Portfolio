@@ -1,10 +1,15 @@
+"use client"
+
 import styles from "../css/page.module.css"
+import Projects from "../components/projects"
 
 export default function Page() {
     return (
         <main className={styles.main}>
             <section className={styles.first_section}>
                 <article id="about">
+                    <h2 className={styles.center_h2}>Обо мне</h2>
+
                     <p>
                         <em>
                             Я — разработчик, имеющий два года опыта в создании веб-приложений и чат-ботов. В своей
@@ -60,13 +65,8 @@ export default function Page() {
 
 
                 <article id="projects">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto culpa dolor facere
-                        impedit mollitia nostrum, quo voluptas! Cumque delectus deleniti modi neque nulla, perferendis
-                        quod ratione reprehenderit saepe sint suscipit veniam voluptatum? Ad animi assumenda cumque
-                        deserunt dicta facere itaque iure odit similique tenetur. Accusamus libero quia quibusdam
-                        ullam?
-                    </p>
+                    <h2 className={styles.center_h2}>Проекты</h2>
+                    <Projects/>
                 </article>
             </section>
 
