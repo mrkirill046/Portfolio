@@ -81,7 +81,9 @@
 
 @media (max-width: 768px) {
     .carousel_next:active,
-    .carousel_back:active {
+    .carousel_back:active,
+    .carousel_next:hover,
+    .carousel_back:hover {
         transform: none;
     }
 

@@ -114,13 +114,15 @@ export default function Page() {
 
                 <article id="github">
                     <h2>GitHub</h2>
-                    <Image className={styles.github_account} width={800} height={400} src={images.github} alt="site logo"/>
+                    <Image className={styles.github_account} width={800} height={400} src={images.github}
+                           alt="site logo"/>
                     <p><a href="https://github.com/mrkirill046" target="_blank">Профиль</a></p>
                 </article>
 
                 <article id="youdo">
                     <h2>YOUDO</h2>
-                    <Image className={styles.youdo_account} width={800} height={400} src={images.youdo} alt="site logo"/>
+                    <Image className={styles.youdo_account} width={800} height={400} src={images.youdo}
+                           alt="site logo"/>
                     <p><a href="https://youdo.com/u12060783" target="_blank">Профиль</a></p>
                 </article>
 
