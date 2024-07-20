@@ -4,6 +4,8 @@ import styles from "../css/page.module.css"
 import Projects from "../components/projects"
 import Image from "next/image"
 import {useEffect, useState} from "react"
+import Posts from "../components/posts";
+import Reviews from "../components/reviews";
 
 export default function Page() {
     const [images, setImages] = useState({
@@ -40,8 +42,7 @@ export default function Page() {
         return () => {
             window.removeEventListener('resize', updateImageSrc)
         }
-    }, [])
-
+    }, [maxWidth])
 
     return (
         <main className={styles.main}>
@@ -140,8 +141,13 @@ export default function Page() {
             </section>
 
             <section className={styles.three_section}>
+                <h2 className={styles.center_h2}>Блог</h2>
+                <Posts/>
+                <br/> <br/>
 
+                <h2 className={styles.center_h2}>Отзывы</h2>
+                <Reviews/>
             </section>
         </main>
-    );
+    )
 }

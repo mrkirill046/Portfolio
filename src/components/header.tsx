@@ -71,6 +71,8 @@ export default function Header() {
                         <li><a href="/#about">Обо мне</a></li>
                         <li><a href="/#contacts">Контакты</a></li>
                         <li><a href="/#projects">Проекты</a></li>
+                        <li><a href="/#blog">Блог</a></li>
+                        <li><a href="/#reviews">Отзывы</a></li>
                         <li><a href="/#github">GitHub</a></li>
                         <li><a href="/#youdo">Youdo</a></li>
                         <li><a href="/#habr">Habr</a></li>
@@ -93,6 +95,8 @@ export default function Header() {
                         <li><a href="/#about">Обо мне</a></li>
                         <li><a href="/#contacts">Контакты</a></li>
                         <li><a href="/#projects">Проекты</a></li>
+                        <li><a href="/#blog">Блог</a></li>
+                        <li><a href="/#reviews">Отзывы</a></li>
                         <li><a href="/#github">GitHub</a></li>
                         <li><a href="/#youdo">Youdo</a></li>
                         <li><a href="/#habr">Habr</a></li>

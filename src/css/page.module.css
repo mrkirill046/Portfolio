@@ -4,6 +4,7 @@
 
 .main {
     background: url("/bg.webp") no-repeat center center;
+    background-size: cover;
 }
 
 .main p,
@@ -158,7 +159,14 @@
 }
 
 .three_section {
-
+    color: white;
+    display: flex;
+    font-size: 2vh;
+    font-family: monospace;
+    padding-top: 12vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    flex-direction: column;
 }
 
 @media (hover: hover) {
