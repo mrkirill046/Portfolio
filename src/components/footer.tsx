@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <article className="copy">
-                <p>
+                <p className={styles.p}>
                     <a href="https://qwy-games.ru/" target="_blank">QWY_Games ©2022-2024</a>. Все права защищены
                 </p>
 

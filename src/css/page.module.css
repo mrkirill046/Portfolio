@@ -48,7 +48,11 @@
 }
 
 .first_section article:hover,
-.first_section article:active {
+.first_section article:active,
+.two_section article:hover,
+.two_section article:active,
+.three_section article:hover,
+.three_section article:active{
     transform: scale(1.01) translateY(-10px);
 }
 

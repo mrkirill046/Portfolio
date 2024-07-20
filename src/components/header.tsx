@@ -63,7 +63,7 @@ export default function Header() {
         <header>
             <section className={styles.header}>
                 <article className={styles.image}>
-                    <a href="/"><Image src="/icon.webp" width={50} height={50} alt="logotype"/></a>
+                    <a href="#"><Image src="/icon.webp" width={50} height={50} alt="logotype"/></a>
                 </article>
 
                 <nav className={styles.list}>
