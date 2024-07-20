@@ -17,6 +17,8 @@ const style: CSSProperties = {
     width: "60vw"
 }
 
+const MAX_STARS = 5;
+
 export default function Reviews() {
     const [reviews, setReviews] = useState<ReviewType[]>([])
     const [activeIndex, setActiveIndex] = useState(0)
@@ -80,6 +82,12 @@ export default function Reviews() {
         setActiveIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length)
     }
 
+    const renderStars = (numStars: number) => {
+        let stars = '★'.repeat(numStars)
+        let emptyStars = '☆'.repeat(MAX_STARS - numStars)
+        return <span>{stars}{emptyStars}</span>
+    }
+
     return (
         <article id="reviews" className={styles.carousel}
                  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
@@ -101,6 +109,9 @@ export default function Reviews() {
                                 <div className={styles.carousel_item}>
                                     <h3>{reviews[activeIndex].title}</h3>
                                     <p>{reviews[activeIndex].content}</p>
+                                    <div className={styles.review_stars}>
+                                        {renderStars(reviews[activeIndex].stars)}
+                                    </div>
                                 </div>
                             </article>
                             <button className={styles.carousel_next} onClick={handleNext}>{">"}</button>

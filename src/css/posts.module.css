@@ -81,6 +81,13 @@
     right: 2vw;
 }
 
+.review_stars {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: gold;
+    font-weight: 900;
+}
+
 @media (hover: hover) {
     .carousel_back:hover,
     .carousel_next:hover {

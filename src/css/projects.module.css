@@ -1,6 +1,7 @@
 .carousel {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     margin-top: 70px;
 }
@@ -80,11 +81,13 @@
 }
 
 @media (max-width: 768px) {
-    .carousel_next:active,
-    .carousel_back:active,
-    .carousel_next:hover,
-    .carousel_back:hover {
-        transform: none;
+    .carousel_next,
+    .carousel_back {
+        display: none;
+    }
+
+    .carousel_box {
+        overflow: visible;
     }
 
     .carousel_item {

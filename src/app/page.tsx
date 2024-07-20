@@ -104,7 +104,7 @@ export default function Page() {
                 </article>
 
 
-                <article id="projects">
+                <article className={styles.projects} id="projects">
                     <h2 className={styles.center_h2}>Проекты</h2>
                     <Projects/>
                 </article>

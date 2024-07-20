@@ -183,6 +183,10 @@
         margin-right: 0;
     }
 
+    .projects {
+        overflow: hidden;
+    }
+
     .github_account {
         display: flex;
         justify-content: center;

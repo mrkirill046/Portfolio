@@ -1,11 +1,15 @@
 "use client"
 
-import {useEffect, useState} from "react"
+import {useEffect, useRef, useState} from "react"
 import styles from "../css/projects.module.css"
 import Image from "next/image"
 
 export default function Projects() {
     const [active, setActive] = useState(2)
+    const [isHovered, setIsHovered] = useState(false)
+    const carouselRef = useRef<HTMLDivElement>(null)
+    const touchStartX = useRef(0)
+    const touchEndX = useRef(0)
 
     const wd = 50
     const hg = 150
@@ -67,8 +71,32 @@ export default function Projects() {
         setActive((prev) => (prev - 1 >= 0 ? prev - 1 : prev))
     }
 
+    const handleMouseEnter = () => {
+        setIsHovered(true)
+    }
+
+    const handleMouseLeave = () => {
+        setIsHovered(false)
+    }
+
+    const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+        touchStartX.current = e.touches[0].clientX
+    }
+
+    const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+        touchEndX.current = e.changedTouches[0].clientX
+        const touchDiff = touchStartX.current - touchEndX.current
+
+        if (Math.abs(touchDiff) > 50) {
+            setActive((prevIndex) => (touchDiff > 0 ? (prevIndex + 1) % items.length : (prevIndex - 1 + items.length) % items.length))
+        }
+    }
+
     return (
-        <div className={styles.carousel}>
+        <div className={styles.carousel}
+             onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+             onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}
+             ref={carouselRef}>
             <div className={styles.carousel_box}>
                 {items.map((item, index) => (
                     <div className={styles.carousel_item} key={index}>
